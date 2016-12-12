@@ -1,4 +1,5 @@
 def LAS(A):
+    #FIXME #Doesn't work, need changes
     n = len(A)
     l = [0] * n
     for i in range(n):
