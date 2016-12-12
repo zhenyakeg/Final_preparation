@@ -12,4 +12,4 @@ def Fibonacci_cycle (n):
 Динамический алгоритм асимптотика O(n)'''
 
 '''Вычисление чисел Фибоначчи. Реализация на Python через цикл и через рекурсию.'''
-print(Fibonacci_cycle(7))
+print(Fibonacci_cycle())
