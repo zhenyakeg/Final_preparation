@@ -30,13 +30,13 @@ class Heap:
         return retval
 
 a = Heap()
-A = [9, 9, 33, 45, 44, 3, 234, 32, 34, 234, 32, 34, 34, 56]
+A = [9, 9, 33, 45, 44, 3, 234, 32, 34, 234, 32, 34, 34, 56, 3, 3, 5, 6, 9]
 for x in A:
     a.heap_push(x)
 print(a.body)
 for i in range (len(A)):
     c = a.heap_pop()
-    print(a.body)
+    print(c)
 
 print(a.body)
 
