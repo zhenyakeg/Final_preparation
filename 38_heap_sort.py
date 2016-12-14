@@ -34,15 +34,10 @@ class Heap:
                 self.body[i], self.body[ip] = self.body[ip], self.body[i]
                 i = ip
         return result
-
-
-a = Heap()
-A = [i for i in range(1,99)]
-for x in A:
-    a.heap_push(x)
-a.heap_pop()
-print(a.body)
-
-'''(i-1)//2 - Родитель
-         i*2 + 1 левый ребенок
-         i*2 + 2 правый ребенок'''
+def heap_sort(A):
+    H = Heap()
+    for x in A:
+        H.heap_push(x)
+    for i in range(len(A)-1):
+        A[i] = H.heap_pop()
+print(heap_sort([i for i in range(1,100)]))
