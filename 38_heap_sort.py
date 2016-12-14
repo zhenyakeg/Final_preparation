@@ -12,32 +12,34 @@ class Heap:
                 self.body[i], self.body[ip] = self.body[ip], self.body[i]
                 i = ip
     def heap_pop(self):
-        assert  len(self.body) > 0
-        result = self.body[0]
+        if len(self.body) == 1:
+            return self.body.pop()
+        retval = self.body[0]
+        self.body[0] = self.body.pop()
         i = 0
-        while i * 2 + 1 < len(self.body): #есть левый
-            if i*2+2 >= len(self.body): #нет правого
-                self.body[i] = self.body[i*2+1]
-                return  result
-            if self.body[i*2+1] > self.body[i*2+2]:
-                self.body[i*2 + 1], self.body[i] = self.body[i], self.body[2*i +1]
-                i = i*2 + 1
+        while 2 * i + 2 < len(self.body) \
+                and self.body[i] < max(self.body[2 * i + 1], self.body[2 * i + 2]):
+            if self.body[2 * i + 1] > self.body[2 * i + 2]:
+                self.body[i], self.body[2 * i + 1] = self.body[2 * i + 1], self.body[i]
+                i = 2 * i + 1
             else:
-                self.body[i*2+2], self.body[i] = self.body[i], self.body[i*2+1]
-                i = i*2 + 2
-        self.body[i] = self.body.pop()
-        while i !=0:
-            ip = (i - 1) // 2
-            if self.body[i] <= self.body[ip]:
-                break
-            else:
-                self.body[i], self.body[ip] = self.body[ip], self.body[i]
-                i = ip
-        return result
+                self.body[i], self.body[2 * i + 2] = self.body[2 * i + 2], self.body[i]
+                i = 2 * i + 2
+        if 2 * i + 1 == len(self.body) - 1 and self.body[i] < self.body[2 * i+1]:
+            self.body[i], self.body[2 * i + 1] = self.body[2 * i + 1], self.body[i]
+        return retval
+
+
 def heap_sort(A):
     H = Heap()
     for x in A:
         H.heap_push(x)
-    for i in range(len(A)-1):
-        A[i] = H.heap_pop()
-print(heap_sort([i for i in range(1,100)]))
+    print(H.body)
+    for i in range(len(A)):
+        c = H.heap_pop()
+        A[i] = c
+    return A
+A = [9, 9, 33, 45, 44, 3, 234, 32, 34, 234, 32, 34, 34, 56]
+A = heap_sort(A)
+
+print(A)
