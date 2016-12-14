@@ -26,7 +26,7 @@ class Heap:
                 self.body[i*2+2], self.body[i] = self.body[i], self.body[i*2+1]
                 i = i*2 + 2
         self.body[i] = self.body.pop()
-        while i != 0:
+        while i !=0:
             ip = (i - 1) // 2
             if self.body[i] <= self.body[ip]:
                 break
