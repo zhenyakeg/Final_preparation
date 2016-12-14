@@ -66,5 +66,4 @@ s = B.pipirka
 C = Some_class([])
 print(s)
 
-
-
+'''30. Перегрузка операторов для классов в Python.'''
