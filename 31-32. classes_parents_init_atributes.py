@@ -1,5 +1,5 @@
 import random
-class Animal(metaclass=ABCMeta):
+class Animal:
     def __init__(self, sex='male', name= 'sf', size=1):
         self.size = size
         self.sex = sex
@@ -19,16 +19,15 @@ class Fish(Animal):
         super(Fish, self).__init__(sex, name, size)
         self.len_of_swims = len_of_swimmers
         '''такой конструктор создает объект класса Animal, то есть запускае его конструктор, таким образом можно
-        не прописывать заново конструктор животного, а просто скормить ему нужные параметры'''
+        не прописывать заново конструктор животного, а просто скормить ему нужные параметры, можно super писать без параметров, делает то же самое'''
     def change_sex(self):
         self.sex = 'female'
         return self
-a = Animal('maaaale', 'Dory', 55)
 f1 = Fish('maaaale', 'Dory', 55, 33)
 f2 = Fish('female', 'peter', 48, 99)
-print(a.sex)
-a.change_sex()
-print(a.sex)
+print(f1.sex)
+f2.change_sex()
+print(f2.sex)
 
 '''31. Конструктор класса в Python. Классовые и экземплярные атрибуты.
    32. Наследование классов в Python. Вызов конструктора надкласса.'''
