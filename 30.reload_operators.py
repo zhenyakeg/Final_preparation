@@ -61,7 +61,10 @@ B = B + 3
 B = B + 4
 B = B - 1
 B = B - 2
-print(str(B))
-B
+B.pipirka = 5
+s = B.pipirka
+C = Some_class([])
+print(s)
+
 
 
