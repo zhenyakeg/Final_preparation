@@ -5,7 +5,7 @@ def king_count_trajectories(M,N):
         for j in range(1,M+1):
             Field[i][j] += Field[i][j-1] + Field[i-1][j] + Field[i-1][j-1]
     return Field[-1][-1]
-print(king_count_trajectories(700, 700))
+print(king_count_trajectories(8, 8))
 
 
 '''27. Двумерное динамическое программирование. Задача о количестве траекторий шахматного короля. Реализация на Python.'''

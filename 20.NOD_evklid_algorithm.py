@@ -17,7 +17,7 @@ def evklid_cycle_stupid (a,b):
             a = a-b
         else:
             b = b-a
-    return b
-print(evklid_recursion(435348,8000))
+    return a
+print(evklid_cycle_stupid(11,12))
 
 '''20. Алгоритм Евклида. Реализация на Python через цикл и через рекурсию.'''

@@ -64,6 +64,6 @@ B = B - 2
 B.pipirka = 5
 s = B.pipirka
 C = Some_class([])
-print(s)
+print(str(B))
 
 '''30. Перегрузка операторов для классов в Python.'''

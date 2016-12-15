@@ -6,7 +6,7 @@ def hanoi(n, i = 1 , k = 3):
         tmp = 6 - i -k
         hanoi(n-1,i, tmp)
         hanoi(n-1, tmp, k)
-hanoi(5)
+hanoi(68)
 '''Асимптотика O(2^N - 1)'''
 
 '''23. Ханойские башни. Алгоритм и его реализация на Python.'''

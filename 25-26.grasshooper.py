@@ -1,5 +1,5 @@
 def count_trajectories(n):
-    k =[0, 1]
+    k =[1, 1]
     for i in range(2, n+1):
         k.append(k[i-2] + k[i-1])
     return k[n]
@@ -30,8 +30,8 @@ def trajectory_cost_list(Price, n):
     for i in range(2, n + 1):
         c.append(Price[i - 1] + min(c[i - 2], c[i - 1]))
     return c
-
-print(trajectory(trajectory_cost_list([4, 3, 5, 6, 6, 4,3], 5), 5))
+print(count_trajectories(2))
+# print(trajectory(trajectory_cost_list([4, 3, 5, 6, 6, 4,3], 5), 5))
 
 '''25. Задача о количестве траекторий Кузнечика на числовой прямой. Реализация на Python.
 
