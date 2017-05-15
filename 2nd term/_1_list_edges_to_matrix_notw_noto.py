@@ -6,5 +6,5 @@ def create_graph_from_lists_to_matrix():
         graph[a][b] = 1
         graph[b][a] = 1
     return graph
-for line in create_graph_from_lists_to_matrix():
-    print(' '.join(map(str, line)))
+# for line in create_graph_from_lists_to_matrix():
+#     print(' '.join(map(str, line)))
