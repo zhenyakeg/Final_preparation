@@ -1,4 +1,4 @@
-def create_graph_from_lists_to_matrix_no():
+def create_graph_from_edges_to_matrix_no():
     n, m = map(int, input().split())
     graph = [[0 for i in range(n)] for x in range(n)]
     for j in range(m):
@@ -7,7 +7,7 @@ def create_graph_from_lists_to_matrix_no():
         graph[b][a] = 1
     return graph
 
-def create_graph_from_lists_to_matrix_o():
+def create_graph_from_edges_to_matrix_o():
     n, m = map(int, input().split())
     graph = [[0 for i in range(n)] for x in range(n)]
     for j in range(m):

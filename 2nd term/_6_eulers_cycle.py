@@ -1,4 +1,4 @@
-from _3_list_edges_to_lists_complementations_notw_noto import create_graph_from_lists_to_complementation_lists
+from _3_list_edges_to_lists_complementations_notw_noto import create_graph_from_edges_to_complementation_lists
 import sys
 
 G = create_graph_from_lists_to_complementation_lists()

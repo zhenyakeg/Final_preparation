@@ -1,4 +1,4 @@
-def create_graph_from_lists_to_complementation_lists():
+def create_graph_from_edges_to_complementation_lists():
     n, m = map(int, input().split())
     graph = {}
     for j in range(m):
@@ -8,6 +8,6 @@ def create_graph_from_lists_to_complementation_lists():
     return graph
 
 
-# G = create_graph_from_lists_to_complementation_lists()
+# G = create_graph_from_edges_to_complementation_lists()
 # for node in G:
 #     print(node, ':', ' '.join(map(str, G[node])))
