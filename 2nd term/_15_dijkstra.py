@@ -38,4 +38,3 @@ else:
     res = dijkstra(graph, st, fin)
     print(str(st) + '-' + str(fin), res[0])
     print(str(st) + '-' + str(fin), ' '.join(map(str, res[1])))
-
