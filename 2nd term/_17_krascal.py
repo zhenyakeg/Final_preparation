@@ -11,13 +11,12 @@ def krascal(graph):
     current_comp = names_of_comp[edges[0][0]]
     for v1, v2, cost in edges:
         prev_comp1 = names_of_comp[v1]
-        prev_comp2 = names_of_comp[v2]
         if names_of_comp[v1] != names_of_comp[v2]:
             names_of_comp[v1] = names_of_comp[v2]
             tree.append((v1, v2))
             tree_weight += cost
             for i in range(n):
-                if names_of_comp[i] == prev_comp1 or names_of_comp[i] == prev_comp2:
+                if names_of_comp[i] == prev_comp1:
                     names_of_comp[i] = names_of_comp[v1]
     return tree_weight, tree
 
