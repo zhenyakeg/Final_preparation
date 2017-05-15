@@ -1,4 +1,4 @@
-from _1_list_edges_to_matrix_notw_noto import create_graph_from_lists_to_matrix
+from _1_list_edges_to_matrix_notw_noto import create_graph_from_lists_to_matrix_no
 
 G = create_graph_from_lists_to_matrix()
 

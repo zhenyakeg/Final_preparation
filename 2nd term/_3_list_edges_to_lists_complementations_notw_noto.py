@@ -8,6 +8,6 @@ def create_graph_from_lists_to_complementation_lists():
     return graph
 
 
-G = create_graph_from_lists_to_complementation_lists()
-for node in G:
-    print(node, ':', ' '.join(map(str, G[node])))
+# G = create_graph_from_lists_to_complementation_lists()
+# for node in G:
+#     print(node, ':', ' '.join(map(str, G[node])))
