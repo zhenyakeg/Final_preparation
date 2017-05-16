@@ -15,10 +15,11 @@ def dfs1(graph, start, used, vector):
 
 def dfs2(inv_graph, start, used, component):
     used.add(start)
-    component.append(start)
+    # component.append(start)
     for neighbour in inv_graph[start]:
         if neighbour not in used:
             dfs2(inv_graph, neighbour, used, component)
+    component.append(start)
 
 vector = []
 used = set()
