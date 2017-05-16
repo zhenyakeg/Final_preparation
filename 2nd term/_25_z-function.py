@@ -1,4 +1,6 @@
 s = input()
+
+
 def z_function(s):
     l, r = 0, 0
     z = [0] * len(s)
