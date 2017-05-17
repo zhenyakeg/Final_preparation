@@ -1,3 +1,4 @@
+
 s = input()
 
 def pi_function(s):
